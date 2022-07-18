@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="890.0" stylesheets="@../resource/css/estiloadministracion.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.marlonhernandez.controller.AdministracionController">
+   <children>
+      <Pane prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: #0C315F;">
+         <children>
+            <Label alignment="TOP_CENTER" layoutX="20.0" opacity="0.79" prefHeight="172.0" prefWidth="162.0" style="-fx-background-color: white; -fx-background-radius: 0 0 50 50;" text="Administración" />
+            <VBox layoutX="19.0" layoutY="218.0" prefHeight="197.0" prefWidth="162.0">
+               <children>
+                  <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="49.0" prefWidth="164.0" styleClass="buttons" text="Nuevo" />
+                  <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="49.0" prefWidth="173.0" styleClass="buttons" text="Eliminar" />
+                  <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#editar" prefHeight="49.0" prefWidth="188.0" styleClass="buttons" text="Editar" />
+                  <Button fx:id="btnReporte" mnemonicParsing="false" onAction="#reporte" prefHeight="49.0" prefWidth="175.0" styleClass="buttons" text="Reporte">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+               </children>
+            </VBox>
+            <ImageView fitHeight="118.0" fitWidth="122.0" layoutX="41.0" layoutY="27.0" opacity="0.62" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/images/734246.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="200.0" layoutY="-6.0" prefHeight="500.0" prefWidth="695.0" style="-fx-background-color: #5D7594;">
+         <children>
+            <Label layoutX="58.0" layoutY="65.0" prefHeight="17.0" prefWidth="24.0" text="ID:" />
+            <TextField fx:id="txtId" layoutX="158.0" layoutY="61.0" prefHeight="25.0" prefWidth="472.0" />
+            <Label layoutX="58.0" layoutY="116.0" prefHeight="17.0" prefWidth="69.0" text="Dirección:" />
+            <TextField fx:id="txtDireccion" layoutX="158.0" layoutY="112.0" prefHeight="25.0" prefWidth="472.0" />
+            <Label layoutX="60.0" layoutY="169.0" prefHeight="17.0" prefWidth="69.0" text="Teléfono:" />
+            <TextField fx:id="txtTelefono" layoutX="160.0" layoutY="165.0" prefHeight="25.0" prefWidth="472.0" />
+            <TableView fx:id="tblAdministracion" layoutX="89.0" layoutY="233.0" onKeyReleased="#selecionarElemento" onMouseClicked="#selecionarElemento" prefHeight="200.0" prefWidth="504.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="84.0" text="ID" />
+                <TableColumn fx:id="colDireccion" minWidth="0.0" prefWidth="289.0" text="Dirección" />
+                  <TableColumn fx:id="colTelefono" minWidth="0.0" prefWidth="130.0" text="Teléfono" />
+              </columns>
+            </TableView>
+            <Pane layoutX="-1.0" layoutY="178.0" prefHeight="341.0" prefWidth="48.0" style="-fx-background-radius: 0 100 0 0; -fx-background-color: white; -fx-opacity: 0.5;" />
+            <Pane layoutX="359.0" layoutY="456.0" prefHeight="63.0" prefWidth="48.0" style="-fx-background-radius: 100 100 0 0; -fx-background-color: white; -fx-opacity: 0.5;" />
+            <Pane layoutX="407.0" layoutY="481.0" prefHeight="38.0" prefWidth="48.0" style="-fx-background-radius: 100 100 0 0; -fx-background-color: white; -fx-opacity: 0.5;" />
+         </children>
+      </AnchorPane>
+      <Pane layoutX="842.0" layoutY="375.0" prefHeight="140.0" prefWidth="48.0" style="-fx-background-radius: 100 0 0 0; -fx-background-color: white; -fx-opacity: 0.5;">
+         <children>
+            <ImageView fitHeight="38.0" fitWidth="24.0" layoutX="12.0" layoutY="70.0" onMouseClicked="#regresarmenu" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/images/Flecha%20izquierda.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="338.0" layoutY="486.0" prefHeight="25.0" prefWidth="48.0" style="-fx-background-radius: 100 100 0 0; -fx-background-color: white; -fx-opacity: 0.5;" />
+      <Pane layoutX="654.0" layoutY="486.0" prefHeight="25.0" prefWidth="48.0" style="-fx-background-radius: 100 100 0 0; -fx-background-color: white; -fx-opacity: 0.5;" />
+   </children>
+</AnchorPane>

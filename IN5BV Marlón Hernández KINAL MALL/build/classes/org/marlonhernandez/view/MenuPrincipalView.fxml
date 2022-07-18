@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1024.0" style="-fx-background-color: #0E3569;" stylesheets="@../resource/css/estilokinalmall.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.marlonhernandez.controller.MenuPrincipalController">
+   <children>
+      <MenuBar layoutX="-14.0" layoutY="1.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulo">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarAdministracion" text="Administración" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarCargos" text="Cargos" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarClientes" text="Clientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarCuentasPorCobrar" text="Cuentas Por Cobrar" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarCuentasPorPagar" text="Cuentas Por Pagar" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarDepartamentos" text="Departamentos" />
+              <MenuItem mnemonicParsing="false" onAction="#mostrarEmpleados" text="Empleado" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarLocales" text="Locales" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarProveedores" text="Proveedores" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarTipoCLientes" text="Tipo clientes" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="?">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#mostrarVistaAutor" text="Autor" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="560.0" fitWidth="654.0" layoutX="188.0" layoutY="8.0" opacity="0.49" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="188.0" AnchorPane.rightAnchor="276.0">
+         <image>
+            <Image url="@../resource/images/Logo.png" />
+         </image>
+      </ImageView>
+      <Pane layoutY="376.0" prefHeight="200.0" prefWidth="95.0" style="-fx-background-color: #5D7594; -fx-background-radius: 0 100 0 1;" />
+      <Pane layoutX="325.0" layoutY="507.0" prefHeight="69.0" prefWidth="95.0" style="-fx-background-color: #5D7594; -fx-background-radius: 100 100 0 0;" />
+      <Pane layoutX="420.0" layoutY="422.0" prefHeight="154.0" prefWidth="95.0" style="-fx-background-color: #5D7594; -fx-background-radius: 100 100 0 0;" />
+      <Pane layoutX="515.0" layoutY="466.0" prefHeight="110.0" prefWidth="95.0" style="-fx-background-color: #5D7594; -fx-background-radius: 100 100 0 0;" />
+      <Pane layoutX="929.0" layoutY="376.0" prefHeight="200.0" prefWidth="95.0" style="-fx-background-color: #5D7594; -fx-background-radius: 100 0 0 1;" />
+   </children>
+</AnchorPane>

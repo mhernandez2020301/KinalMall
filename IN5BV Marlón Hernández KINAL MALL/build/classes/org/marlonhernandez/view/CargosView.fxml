@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1024.0" style="-fx-background-color: #5D7594;" stylesheets="@../resource/css/estiloadministracion.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.marlonhernandez.controller.CargosController">
+   <children>
+      <Pane prefHeight="650.0" prefWidth="180.0" style="-fx-background-color: #0C315F;">
+         <children>
+            <Label alignment="TOP_CENTER" layoutX="9.0" opacity="0.79" prefHeight="172.0" prefWidth="162.0" style="-fx-background-color: white; -fx-background-radius: 0 0 50 50;" text="Cargos" />
+            <VBox layoutX="14.0" layoutY="353.0" prefHeight="200.0" prefWidth="140.0">
+               <children>
+                  <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="50.0" prefWidth="140.0" styleClass="buttons" text="Nuevo">
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/Nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="50.0" prefWidth="140.0" styleClass="buttons" text="Eliminar">
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/Eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#editar" prefHeight="50.0" prefWidth="140.0" styleClass="buttons" text="Editar">
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/Editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="btnReportar" mnemonicParsing="false" onAction="#reportar" prefHeight="50.0" prefWidth="140.0" styleClass="buttons" text="Reportar">
+                     <graphic>
+                        <ImageView fx:id="imgReportar" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/Reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </VBox>
+            <ImageView fitHeight="109.0" fitWidth="117.0" layoutX="32.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/images/Cargos.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="-12.0" layoutY="213.0" opacity="0.32" prefHeight="166.0" prefWidth="32.0" style="-fx-background-color: #E9ECF0; -fx-background-radius: 0 100 100 100;" />
+            <Pane layoutX="124.0" layoutY="555.0" opacity="0.32" prefHeight="33.0" prefWidth="32.0" style="-fx-background-color: #E9ECF0; -fx-background-radius: 100 100 100 100;" />
+         </children>
+      </Pane>
+      <Label layoutX="234.0" layoutY="170.0" prefHeight="17.0" prefWidth="24.0" text="ID:" />
+      <TextField fx:id="txtId" layoutX="389.0" layoutY="166.0" prefHeight="25.0" prefWidth="472.0" />
+      <Label layoutX="234.0" layoutY="237.0" prefHeight="17.0" prefWidth="69.0" text="Nombres:" />
+      <TextField fx:id="txtNombres" layoutX="389.0" layoutY="233.0" prefHeight="25.0" prefWidth="472.0" />
+      <TableView fx:id="tblCargos" layoutX="228.0" layoutY="366.0" onMouseClicked="#selecionarElemento" prefHeight="237.0" prefWidth="753.0" style="-fx-background-color: #E9ECF0;" AnchorPane.leftAnchor="228.0" AnchorPane.rightAnchor="52.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="colNombres" minWidth="0.0" prefWidth="693.0" text="Nombres" />
+         </columns>
+      </TableView>
+      <Pane layoutX="180.0" layoutY="484.0" opacity="0.32" prefHeight="166.0" prefWidth="88.0" style="-fx-background-color: #E9ECF0; -fx-background-radius: 0 100 0 0;" />
+      <Pane layoutX="713.0" layoutY="600.0" opacity="0.32" prefHeight="50.0" prefWidth="88.0" style="-fx-background-color: #E9ECF0; -fx-background-radius: 100 100 0 0;" />
+      <Pane layoutX="535.0" layoutY="600.0" opacity="0.32" prefHeight="50.0" prefWidth="88.0" style="-fx-background-color: #E9ECF0; -fx-background-radius: 100 100 0 0;" />
+      <Pane layoutX="625.0" layoutY="600.0" opacity="0.32" prefHeight="50.0" prefWidth="88.0" style="-fx-background-color: #E9ECF0; -fx-background-radius: 100 100 0 0;" />
+      <Pane layoutX="930.0" layoutY="503.0" opacity="0.32" prefHeight="147.0" prefWidth="88.0" style="-fx-background-color: #E9ECF0; -fx-background-radius: 100 0 0 0;" />
+      <ImageView fx:id="btnRegresar" fitHeight="37.0" fitWidth="24.0" layoutX="986.0" layoutY="14.0" onMouseClicked="#regresar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/images/Flecha%20izquierda.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="956.0" style="-fx-background-color: #5D7594;" stylesheets="@../resource/css/estiloadministracion.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.marlonhernandez.controller.HorariosController">
+   <children>
+      <Pane prefHeight="650.0" prefWidth="180.0" style="-fx-background-color: #0C315F;">
+         <children>
+            <Label alignment="TOP_CENTER" layoutX="9.0" opacity="0.79" prefHeight="172.0" prefWidth="162.0" style="-fx-background-color: white; -fx-background-radius: 0 0 50 50;" text="Horarios" />
+            <VBox layoutX="14.0" layoutY="353.0" prefHeight="200.0" prefWidth="140.0">
+               <children>
+                  <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="50.0" prefWidth="140.0" styleClass="buttons" text="Nuevo">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/Nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="50.0" prefWidth="140.0" styleClass="buttons" text="Eliminar">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/Eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#editar" prefHeight="50.0" prefWidth="140.0" styleClass="buttons" text="Editar">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/Editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="btnReportar" mnemonicParsing="false" onAction="#reportar" prefHeight="50.0" prefWidth="140.0" styleClass="buttons" text="Reportar">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/Reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </VBox>
+            <Pane layoutX="-12.0" layoutY="213.0" opacity="0.32" prefHeight="166.0" prefWidth="32.0" style="-fx-background-color: #E9ECF0; -fx-background-radius: 0 100 100 100;" />
+            <Pane layoutX="124.0" layoutY="555.0" opacity="0.32" prefHeight="33.0" prefWidth="32.0" style="-fx-background-color: #E9ECF0; -fx-background-radius: 100 100 100 100;" />
+            <ImageView fitHeight="128.0" fitWidth="146.0" layoutX="26.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/images/Calendario.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="218.0" layoutY="53.0" prefHeight="17.0" prefWidth="24.0" text="ID:" />
+      <TextField fx:id="txtId" layoutX="318.0" layoutY="49.0" prefHeight="25.0" prefWidth="472.0" />
+      <Label layoutX="218.0" layoutY="104.0" prefHeight="17.0" prefWidth="98.0" text="Horario Entrada" />
+      <TableView fx:id="tblClientes" layoutX="196.0" layoutY="325.0" onKeyReleased="#selecionarElemento" onMouseClicked="#selecionarElemento" prefHeight="271.0" prefWidth="746.0" style="-fx-background-color: #E9ECF0;" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="15.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="colNombres" minWidth="0.0" prefWidth="107.0" text="Horario Entrada" />
+            <TableColumn fx:id="colApellidos" minWidth="0.0" prefWidth="105.0" text="Horario Salida" />
+            <TableColumn fx:id="colTelefono" prefWidth="68.0" text="Lunes" />
+            <TableColumn fx:id="colEmail" prefWidth="58.0" text="Martes" />
+            <TableColumn fx:id="colDireccion" prefWidth="75.0" text="Miercoles" />
+            <TableColumn fx:id="colIdLocal" prefWidth="62.0" text="Jueves" />
+            <TableColumn fx:id="colIdAdministracion" minWidth="0.0" prefWidth="66.0" text="Viernes" />
+            <TableColumn fx:id="colTipoCliente" prefWidth="74.0" text="Sábado" />
+            <TableColumn prefWidth="73.0" text="Domingo" />
+         </columns>
+      </TableView>
+      <Label layoutX="220.0" layoutY="146.0" prefHeight="17.0" prefWidth="98.0" text="Horario Salida:" />
+      <Pane layoutX="180.0" layoutY="484.0" opacity="0.32" prefHeight="166.0" prefWidth="88.0" style="-fx-background-color: #E9ECF0; -fx-background-radius: 0 100 0 0;" />
+      <Pane layoutX="713.0" layoutY="600.0" opacity="0.32" prefHeight="50.0" prefWidth="88.0" style="-fx-background-color: #E9ECF0; -fx-background-radius: 100 100 0 0;" />
+      <Pane layoutX="535.0" layoutY="600.0" opacity="0.32" prefHeight="50.0" prefWidth="88.0" style="-fx-background-color: #E9ECF0; -fx-background-radius: 100 100 0 0;" />
+      <Pane layoutX="625.0" layoutY="600.0" opacity="0.32" prefHeight="50.0" prefWidth="88.0" style="-fx-background-color: #E9ECF0; -fx-background-radius: 100 100 0 0;" />
+      <ImageView fitHeight="37.0" fitWidth="24.0" layoutX="902.0" layoutY="24.0" onMouseClicked="#regresar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/images/Flecha%20izquierda.png" />
+         </image>
+      </ImageView>
+      <JFXTimePicker layoutX="318.0" layoutY="99.0" />
+      <JFXTimePicker layoutX="318.0" layoutY="141.0" />
+      <CheckBox layoutX="261.0" layoutY="224.0" mnemonicParsing="false" text="Lunes" />
+      <CheckBox layoutX="337.0" layoutY="224.0" mnemonicParsing="false" text="Martes" />
+      <CheckBox layoutX="406.0" layoutY="224.0" mnemonicParsing="false" text="Miercoles" />
+      <CheckBox layoutX="486.0" layoutY="224.0" mnemonicParsing="false" text="Jueves" />
+      <CheckBox layoutX="557.0" layoutY="224.0" mnemonicParsing="false" text="Viernes" />
+      <CheckBox layoutX="621.0" layoutY="224.0" mnemonicParsing="false" text="Sábado" />
+      <CheckBox layoutX="692.0" layoutY="224.0" mnemonicParsing="false" text="Domingo" />
+   </children>
+</AnchorPane>

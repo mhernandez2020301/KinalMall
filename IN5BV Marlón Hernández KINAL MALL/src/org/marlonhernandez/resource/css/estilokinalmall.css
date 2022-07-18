@@ -1,0 +1,23 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13/05/2021, 15:21:48
+    Author     : Marlon PC
+*/
+
+.menu-bar {
+    -fx-background-color:  #045FB4;
+    -fx-opacity: 0.5;
+    -fx-border-color: #CFD5DF;
+}
+.menu-bar .label {
+    -fx-font-weight: bold;
+    -fx-text-fiel: #B7C1CF;
+}
+
+
+
+

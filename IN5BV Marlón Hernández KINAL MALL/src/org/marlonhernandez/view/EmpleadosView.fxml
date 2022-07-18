@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="732.0" prefWidth="1064.0" style="-fx-background-color: #5D7594;" stylesheets="@../resource/css/estiloadministracion.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.marlonhernandez.controller.EmpleadosController">
+   <children>
+      <Pane prefHeight="732.0" prefWidth="180.0" style="-fx-background-color: #0C315F;">
+         <children>
+            <Label alignment="TOP_CENTER" layoutX="9.0" opacity="0.79" prefHeight="172.0" prefWidth="162.0" style="-fx-background-color: white; -fx-background-radius: 0 0 50 50;" text="Empleados" />
+            <VBox layoutX="14.0" layoutY="353.0" prefHeight="200.0" prefWidth="140.0">
+               <children>
+                  <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="50.0" prefWidth="140.0" styleClass="buttons" text="Nuevo">
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/Nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="50.0" prefWidth="140.0" styleClass="buttons" text="Eliminar">
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/Eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#editar" prefHeight="50.0" prefWidth="140.0" styleClass="buttons" text="Editar">
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/Editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="btnReportar" mnemonicParsing="false" onAction="#reportar" prefHeight="50.0" prefWidth="140.0" styleClass="buttons" text="Reportar">
+                     <graphic>
+                        <ImageView fx:id="imgReportar" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/Reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </VBox>
+            <ImageView fitHeight="109.0" fitWidth="117.0" layoutX="32.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/images/Empleados.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="-12.0" layoutY="213.0" opacity="0.32" prefHeight="166.0" prefWidth="32.0" style="-fx-background-color: #E9ECF0; -fx-background-radius: 0 100 100 100;" />
+            <Pane layoutX="124.0" layoutY="555.0" opacity="0.32" prefHeight="33.0" prefWidth="32.0" style="-fx-background-color: #E9ECF0; -fx-background-radius: 100 100 100 100;" />
+         </children>
+      </Pane>
+      <Label layoutX="228.0" layoutY="30.0" prefHeight="17.0" prefWidth="24.0" text="ID:" />
+      <TextField fx:id="txtId" layoutX="328.0" layoutY="26.0" prefHeight="25.0" prefWidth="472.0" />
+      <Label layoutX="228.0" layoutY="81.0" prefHeight="17.0" prefWidth="69.0" text="Nombres:" />
+      <TextField fx:id="txtNombres" layoutX="328.0" layoutY="77.0" prefHeight="25.0" prefWidth="132.0" />
+      <Label layoutX="566.0" layoutY="81.0" prefHeight="17.0" prefWidth="69.0" text="Apellidos:" />
+      <TextField fx:id="txtApellidos" layoutX="666.0" layoutY="77.0" prefHeight="25.0" prefWidth="132.0" />
+      <TableView fx:id="tblEmpleados" layoutX="198.0" layoutY="368.0" onKeyReleased="#selecionarElemento" onMouseClicked="#selecionarElemento" prefHeight="271.0" prefWidth="805.0" style="-fx-background-color: #E9ECF0;">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="colNombres" minWidth="0.0" prefWidth="75.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" minWidth="0.0" prefWidth="116.0" text="Apellidos" />
+            <TableColumn fx:id="colTelefono" prefWidth="74.0" text="Telefono" />
+            <TableColumn fx:id="colEmail" prefWidth="103.0" text="Email" />
+            <TableColumn fx:id="colDepartamento" prefWidth="109.0" text="Departamento" />
+            <TableColumn fx:id="colCargo" prefWidth="68.0" text="Cargo" />
+            <TableColumn fx:id="colHorario" minWidth="0.0" prefWidth="66.0" text="Horario" />
+            <TableColumn fx:id="colAdministracion" prefWidth="46.0" text="Administracion" />
+            <TableColumn fx:id="colSueldo" prefWidth="54.0" text="Sueldo" />
+            <TableColumn fx:id="colFechaContratacion" prefWidth="75.0" text="fecha Contratación" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtTelefono" layoutX="329.0" layoutY="123.0" prefHeight="25.0" prefWidth="132.0" />
+      <Label layoutX="230.0" layoutY="123.0" prefHeight="17.0" prefWidth="69.0" text="Telefono:" />
+      <Label layoutX="229.0" layoutY="169.0" prefHeight="17.0" prefWidth="69.0" text="Sueldo" />
+      <TextField fx:id="txtSueldo" layoutX="329.0" layoutY="165.0" prefHeight="25.0" prefWidth="472.0" />
+      <TextField fx:id="txtEmail" layoutX="666.0" layoutY="127.0" prefHeight="25.0" prefWidth="132.0" />
+      <Label layoutX="564.0" layoutY="123.0" prefHeight="17.0" prefWidth="69.0" text="Email" />
+      <ComboBox fx:id="cmbDepartamento" layoutX="329.0" layoutY="220.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbCargo" layoutX="648.0" layoutY="220.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbHorario" layoutX="329.0" layoutY="271.0" prefHeight="25.0" prefWidth="472.0" />
+      <Label layoutX="228.0" layoutY="224.0" prefHeight="17.0" prefWidth="88.0" text="Departamento" />
+      <Label layoutX="560.0" layoutY="224.0" prefHeight="17.0" prefWidth="69.0" text="Cargo" />
+      <Label layoutX="228.0" layoutY="275.0" prefHeight="17.0" prefWidth="80.0" text="Horario" />
+      <Pane layoutX="180.0" layoutY="484.0" opacity="0.32" prefHeight="248.0" prefWidth="88.0" style="-fx-background-color: #E9ECF0; -fx-background-radius: 0 100 0 0;" />
+      <Pane layoutX="713.0" layoutY="600.0" opacity="0.32" prefHeight="135.0" prefWidth="88.0" style="-fx-background-color: #E9ECF0; -fx-background-radius: 100 100 0 0;" />
+      <Pane layoutX="535.0" layoutY="600.0" opacity="0.32" prefHeight="135.0" prefWidth="88.0" style="-fx-background-color: #E9ECF0; -fx-background-radius: 100 100 0 0;" />
+      <Pane layoutX="625.0" layoutY="600.0" opacity="0.32" prefHeight="135.0" prefWidth="88.0" style="-fx-background-color: #E9ECF0; -fx-background-radius: 100 100 0 0;" />
+      <Pane layoutX="930.0" layoutY="503.0" opacity="0.32" prefHeight="229.0" prefWidth="140.0" style="-fx-background-color: #E9ECF0; -fx-background-radius: 100 0 0 0;" />
+      <ImageView fitHeight="37.0" fitWidth="24.0" layoutX="986.0" layoutY="14.0" onMouseClicked="#regresar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/images/Flecha%20izquierda.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbAdministracion" layoutX="329.0" layoutY="318.0" prefHeight="25.0" prefWidth="472.0" />
+      <Label layoutX="228.0" layoutY="322.0" prefHeight="17.0" prefWidth="80.0" text="Administración" />
+      <Button fx:id="btnHorarios" layoutX="868.0" layoutY="149.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="125.0" styleClass="buttons" text="Mostrar Horarios" />
+      <DatePicker fx:id="dtFechaContratacion" layoutX="328.0" layoutY="670.0" prefHeight="25.0" prefWidth="472.0" />
+      <Label layoutX="202.0" layoutY="674.0" text="Fecha Contratación" />
+   </children>
+</AnchorPane>
